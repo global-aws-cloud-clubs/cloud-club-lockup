@@ -36,5 +36,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.DEPLOYMENT_SECRET }}
-        publish_dir: ./dist
+        publish_dir: ./cloud-club-lockup/dist
         publish_branch: gh-pages
