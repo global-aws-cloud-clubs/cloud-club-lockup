@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "baseUrl": "/cloud-club-lockup/",
+    "baseUrl": ".",
     "moduleResolution": "node",
     "paths": {
       "@/*": [
