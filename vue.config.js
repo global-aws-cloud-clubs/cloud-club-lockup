@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.BASE_URL === 'production'
-    ? '/cloud-club-lockup/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/'
     : '/'
 })
