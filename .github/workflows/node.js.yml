@@ -38,3 +38,4 @@ jobs:
         github_token: ${{ secrets.DEPLOYMENT_SECRET }}
         publish_dir: ./dist
         publish_branch: gh-pages
+        destination_dir: cloud-club-lockup
