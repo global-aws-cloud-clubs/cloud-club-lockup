@@ -1,31 +1,14 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
+name: Build Vue
+on: [push]
 jobs:
-  build-and-deploy:
+  build_vue:
     runs-on: ubuntu-latest
-
+    name: Build Vue
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v2
+    - id: Build-Vue
+      uses: xRealNeon/VuePagesAction@1.0.1
       with:
-        node-version: 20
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Build project
-      run: npm run build
-
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v2
-      with:
-        artifact_name: github-pages
+        username: 'jlooper'
+        reponame: 'cloud-club-lockup'
         token: ${{ secrets.DEPLOYMENT_SECRET }}
