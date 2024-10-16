@@ -11,4 +11,4 @@ jobs:
       with:
         username: 'global-aws-cloud-clubs'
         reponame: 'cloud-club-lockup'
-        token: ${{ secrets.DEPLOYMENT_SECRET }}
+        token: ${{ secrets.GITHUB_TOKEN }}
